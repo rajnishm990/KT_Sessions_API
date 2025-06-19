@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from . import views
 
 router = DefaultRouter()
-router.register(r'kt', views.KTSessionViewSet, basename='kt-session')
+router.register(r'kt', views.KTSessionViewSet, basename='kt')
 
 urlpatterns = [
     path('', include(router.urls)),
