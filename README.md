@@ -174,11 +174,6 @@ celery -A kt_platform worker --loglevel=info
 python manage.py runserver
 ```
 
-### Running Tests
-
-```bash
-docker-compose exec web python manage.py test
-```
 
 ## API Usage Examples
 
