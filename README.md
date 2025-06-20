@@ -141,7 +141,7 @@ SECRET_KEY=your-secret-key-here
 DEBUG=True
 DATABASE_URL=postgresql://postgres:postgres@db:5432/kt_platform
 REDIS_URL=redis://redis:6379/0
-ALLOWED_HOSTS = [ ]
+ALLOWED_HOSTS = 'localhost'
 ```
 
 ## Development
@@ -166,7 +166,7 @@ redis-server
 
 4. **Start Celery worker**
 ```bash
-celery -A kt_platform worker --loglevel=info
+celery -A core worker --loglevel=info
 ```
 
 5. **Start Django server**
