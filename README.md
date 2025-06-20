@@ -4,7 +4,7 @@
 
 - **Backend**: Django 4.2 + Django REST Framework
 - **Authentication**: JWT (djangorestframework-simplejwt)
-- **Database**: PostgreSQL (SQLite for development)
+- **Database**: PostgreSQL
 - **Task Queue**: Celery + Redis
 - **Documentation**: Swagger/OpenAPI
 - **Containerization**: Docker + Docker Compose
@@ -20,7 +20,7 @@
 
 1. **Clone the repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/rajnishm990/KT_Sessions_API
 cd backend
 ```
 
@@ -50,7 +50,7 @@ docker-compose exec web python manage.py createsuperuser
 ### Authentication Endpoints
 
 #### Register 
-I haven't made a Register endpoint so for registering a user use django's admin panel or user super user for testing
+I haven't made a Register endpoint so for registering a user use django's admin panel or user super user's credentials
 
 ```bash
 docker-compose exec web python manage.py createsuperuser
@@ -97,7 +97,6 @@ Authorization: Bearer <access_token>
 ```http
 POST /api/kt/{session_id}/add_attachment/
 Authorization: Bearer <access_token>
-Content-Type: multipart/form-data
 
 file_type: audio
 ```
